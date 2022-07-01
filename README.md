@@ -6,7 +6,7 @@ This example is showing Simple Data Structure using **JavaScript / ES6+**
 1. Simple Data Structure explanation 
 2. All examples are written using **JavaScript/ ES6+**
 
-3. Stack and Operations are described using Array
+3. Stack and its various operations are described using Array
 
 
 ## Installation
