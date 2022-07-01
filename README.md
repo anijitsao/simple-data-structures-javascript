@@ -19,9 +19,9 @@ $ git clone git@github.com:anijitsahu/simple-data-structures-javascript.git
 ```bash
 $ cd simple-data-structures-javascript.git
 ```
-3. To run a particular Data Structure go inside the directory and run the corresponding file using [Node JS] (https://www.nodejs.org/). For example,
+3. To run a particular Data Structure go inside the directory and run the corresponding file using [Node JS](https://www.nodejs.org/). For example,
 
-```javascript
+```bash
 $ cd Stack
 $ node stackUsingArray.js
 ```
