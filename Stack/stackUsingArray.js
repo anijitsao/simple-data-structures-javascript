@@ -23,9 +23,9 @@ export default class Stack {
   // print the current Stack
   print() {
     if (this.size === 0) {
-      console.log("This Stack is empty");
+      return "This Stack is empty";
     } else {
-      console.log(this.elements.toString());
+      return this.elements.toString();
     }
   }
 

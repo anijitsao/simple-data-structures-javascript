@@ -1,12 +1,15 @@
-import stack from "./stackUsingArray.js";
-// const stack = require("./stackUsingArray");
+// import the class
+import Stack from "./stackUsingArray.js";
 
-describe("=============== testing with Jest ===============", () => {
-  test("1 + 1 returns 2", () => {
-    let a = 1;
-    let b = 1;
-    let c = a + b;
+// initialize the Stack object
+const stackTest = new Stack();
 
-    expect(c).toBe(2);
+describe("=============== Testing Stack Data Structure with Jest ===============", () => {
+  test("Checking the Empty Stack", () => {
+    expect(stackTest.getSize()).toBe(0);
+  });
+
+  test("Printing the Empty Stack", () => {
+    expect(stackTest.print()).toBe("This Stack is empty");
   });
 });
