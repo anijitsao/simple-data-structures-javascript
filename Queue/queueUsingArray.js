@@ -8,18 +8,18 @@ export default class Queue {
     this.size = 0;
   }
 
-  // PUSH opertaion
-  push(ele) {
+  // ENQUEUE opertaion
+  enqueue(ele) {
     this.elements = [...this.elements, ele];
     this.size = this.size + 1;
   }
 
-  // POP operation LIFO
-  pop() {
+  // DEQUEUE operation FIFO
+  dequeue() {
     if (this.size === 0) {
       return false;
     }
-    this.elements.length = this.elements.length - 1;
+    this.elements.splice(0, 1);
     this.size = this.size - 1;
   }
 

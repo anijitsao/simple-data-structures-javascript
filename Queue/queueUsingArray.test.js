@@ -13,34 +13,34 @@ describe("=============== Testing Queue Data Structure with Jest ===============
     expect(queueTest.print()).toEqual("");
   });
 
-  test("Pushing elements in the Queue", () => {
-    queueTest.push(10);
+  test("Enqueuing elements in the Queue", () => {
+    queueTest.enqueue(10);
     expect(queueTest.print()).toEqual("10");
   });
 
-  test("Pushing element and checking size of the Queue", () => {
+  test("Enqueuing element and checking size of the Queue", () => {
     expect(queueTest.getSize()).toBe(1);
   });
 
-  test("Popping elements from the Queue", () => {
-    queueTest.pop();
+  test("Dequeuing elements from the Queue", () => {
+    queueTest.dequeue();
     expect(queueTest.print()).toEqual("");
   });
 
-  test("Popping elements and checking size of the Queue", () => {
+  test("Dequeuing elements and checking size of the Queue", () => {
     expect(queueTest.getSize()).toBe(0);
   });
 
-  test("Popping elements from an Empty Queue", () => {
-    const emptyPop = queueTest.pop();
+  test("Dequeuing elements from an Empty Queue", () => {
+    const emptyPop = queueTest.dequeue();
     expect(emptyPop).toBe(false);
   });
 
   test("Searching for a value", () => {
-    queueTest.push(10);
-    queueTest.push(234);
-    queueTest.push(10);
-    queueTest.push(99);
+    queueTest.enqueue(10);
+    queueTest.enqueue(234);
+    queueTest.enqueue(10);
+    queueTest.enqueue(99);
     expect(queueTest.search(10)).toBe(2);
   });
 });
