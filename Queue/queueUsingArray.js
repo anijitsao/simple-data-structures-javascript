@@ -35,6 +35,7 @@ export default class Queue {
 
   // get the index of a searched value
   search(value) {
-    return this.elements.lastIndexOf(value);
+    // for Queue it should give the first match i.e. FIFO
+    return this.elements.indexOf(value);
   }
 }

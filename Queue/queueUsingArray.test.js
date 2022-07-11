@@ -41,6 +41,11 @@ describe("=============== Testing Queue Data Structure with Jest ===============
     queueTest.enqueue(234);
     queueTest.enqueue(10);
     queueTest.enqueue(99);
-    expect(queueTest.search(10)).toBe(2);
+    expect(queueTest.search(10)).toBe(0);
+  });
+
+  test("Dequequing after Multiple Enqueue", () => {
+    queueTest.dequeue();
+    expect(queueTest.print()).toEqual("234,10,99");
   });
 });

@@ -27,4 +27,5 @@ $ npm install
 
 ```bash
 $ npm test
+$ npm test -- queueUsingArray // to test a particular file
 ```
