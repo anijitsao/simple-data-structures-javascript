@@ -1,6 +1,6 @@
 # simple-data-structures-javascript
 
-This example is showing Simple Data Structure using **JavaScript / ES6+**
+This example is showing Simple Data Structure using **JavaScript / ES6+**. All the examples are tested in [Node JS](https://nodejs.org/en/docs/guides/) environment with the help of testing framework [Jest](https://jestjs.io/docs/getting-started).
 
 ## Features
 1. Simple Data Structure explanation 
