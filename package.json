@@ -4,8 +4,9 @@
   "description": "This example is showing Simple Data Structure using **JavaScript / ES6+**",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anijitsahu/simple-data-structures-javascript.git"
@@ -19,5 +20,8 @@
   "homepage": "https://github.com/anijitsahu/simple-data-structures-javascript#readme",
   "dependencies": {
     "jest": "^28.1.2"
+  },
+  "jest": {
+    "collectCoverage": true
   }
 }

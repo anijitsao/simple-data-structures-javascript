@@ -1,3 +1,6 @@
+import stack from "./stackUsingArray.js";
+// const stack = require("./stackUsingArray");
+
 describe("=============== testing with Jest ===============", () => {
   test("1 + 1 returns 2", () => {
     let a = 1;
