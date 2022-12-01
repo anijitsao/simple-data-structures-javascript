@@ -8,11 +8,21 @@ This example is showing Simple Data Structure using **JavaScript / ES6+**. All t
 2. All examples are written using **JavaScript/ ES6+**
 3. **Unit test cases** are written using [Jest](https://jestjs.io/docs/getting-started)
 
-<ol start=4>
+### Data Structures
+<ol start=1>
 <li> Stack and its various operations are described using Array</li>
 <li> Queue and its various operations are described using Array</li>
 
 </ol>
+
+### Sorting
+1. Bubble sorting added
+
+### Recursion
+1. String Pallindrome with Recursion feature added
+
+### Others
+- Several other problems added
 
 ## Installation
 
