@@ -1,4 +1,7 @@
 function bubbleSort(arrayToSort) {
+  if (!arrayToSort) {
+    return false;
+  }
   // looping over every elements of the received array
   for (let rows = 0; rows < arrayToSort.length; rows++) {
     for (let columns = 0; columns < arrayToSort.length; columns++) {

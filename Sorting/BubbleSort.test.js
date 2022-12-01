@@ -5,4 +5,8 @@ describe("Testing Bubble Sort", () => {
     const arrayToSort = [20, 35, 2, 78, 1, 4];
     expect(bubbleSort(arrayToSort)).toEqual([1, 2, 4, 20, 35, 78]);
   });
+
+  test("If no array present", () => {
+    expect(bubbleSort()).toEqual(false);
+  });
 });
