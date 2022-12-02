@@ -27,6 +27,8 @@ This example is showing Simple Data Structure using **JavaScript / ES6+**. All t
 ### Recursion
 
 1. String Pallindrome with Recursion feature added
+2. Factorial with recursion supported
+3. Fibonacci Series with recursion is added
 
 ### Others
 
