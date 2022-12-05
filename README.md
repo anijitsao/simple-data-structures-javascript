@@ -23,6 +23,7 @@ This example is showing Simple Data Structure using **JavaScript / ES6+**. All t
 ### Sorting
 
 1. Bubble sorting added
+2. Selection sorting added
 
 ### Recursion
 
