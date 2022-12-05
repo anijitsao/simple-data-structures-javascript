@@ -1,18 +1,24 @@
 // reducer function
 const reducer = (stateInitial = { value: 0 }, action) => {
-  console.log("Actions", action, " and state", stateInitial);
+  console.log('Actions', action, ' and state', stateInitial);
 
   switch (action?.type) {
-    case "INCREMENT":
+    case 'INCREMENT':
       return {
         ...stateInitial,
         value: stateInitial?.value + 1,
       };
 
-    case "DECREMENT":
+    case 'DECREMENT':
       return {
         ...stateInitial,
         value: stateInitial?.value - 1,
+      };
+
+    case 'FETCHUSERS':
+      return {
+        ...stateInitial,
+        users: action.payload,
       };
 
     default:
