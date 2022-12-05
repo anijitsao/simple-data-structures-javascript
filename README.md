@@ -34,6 +34,7 @@ This example is showing Simple Data Structure using **JavaScript / ES6+**. All t
 ### Others
 
 - Several other problems added
+- Basic React Redux example added
 
 ## Installation
 
