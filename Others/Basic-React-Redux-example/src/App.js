@@ -21,7 +21,13 @@ export default function App() {
   const count = 0;
 
   const fetchData = async () => {
-    const data = await fetch('https://jsonplaceholder.typicode.com/users');
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    const data = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+      },
+    });
     const users = await data.json();
     console.log('Users', users);
     dispatch({ type: 'FETCHUSERS', payload: users });
@@ -37,7 +43,12 @@ export default function App() {
       </button>{' '}
       &nbsp;
       <button onClick={fetchData}>Fetch Data</button>
-      <p>Users {JSON.stringify(state.users)}</p>
+      <div>
+        Users{' '}
+        {state?.users?.map((user) => {
+          return <h5>{user.name}</h5>;
+        })}
+      </div>
     </div>
   );
 }
