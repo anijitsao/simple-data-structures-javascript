@@ -1,8 +1,12 @@
+// import from libraries
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+// css
 import './style.css';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchDataUsingThunk } from './actions';
+// local imports
+import { fetchDataUsingThunk, fetchDataSimple } from './actions';
 
 export default function App() {
   const dispatch = useDispatch();
@@ -18,20 +22,11 @@ export default function App() {
       : dispatch({ type: 'counter/increment' });
   };
 
-  // console.log('State', value);
-  const count = 0;
-
   const fetchData = async () => {
     const url = 'https://jsonplaceholder.typicode.com/users';
-    const data = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'content-type': 'application/json',
-      },
-    });
-    const users = await data.json();
-    console.log('Users', users);
-    dispatch({ type: 'fetch/users', payload: users });
+
+    // calling the action with the url and dispatch
+    fetchDataSimple(url, dispatch);
   };
 
   const fetchDataWithThunk = async () => {

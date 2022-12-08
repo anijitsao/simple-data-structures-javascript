@@ -1,7 +1,5 @@
-// this is action file using Thunk
-
+// this is action creator using Thunk
 const fetchDataUsingThunk = (url) => {
-  console.log("Url received", url);
   return async (dispatch) => {
     dispatch({ type: "fetching/started" });
 
@@ -31,4 +29,18 @@ const unableToGet = () => {
   };
 };
 
-export { fetchDataUsingThunk };
+// fetch data without using Thunks
+// this call can be done inside the Component i.e. App.js file
+const fetchDataSimple = async (url, dispatch) => {
+  const data = await fetch(url, {
+    method: "GET",
+    headers: {
+      "content-type": "application/json",
+    },
+  });
+  const users = await data.json();
+  console.log("Users", users);
+  dispatch({ type: "fetch/users", payload: users });
+};
+
+export { fetchDataUsingThunk, fetchDataSimple };
