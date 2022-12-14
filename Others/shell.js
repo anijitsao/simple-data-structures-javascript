@@ -60,5 +60,6 @@ console.log(
     .port(8080)
     .https()
     .queryParams({ name: "anijit", lastName: "sau" })
+    .path("/the/file")
     .build()
 );
