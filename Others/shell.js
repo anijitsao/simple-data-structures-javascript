@@ -1,19 +1,20 @@
-// this example (Shell Exam) will constitute an url from its parts
+// this example will constitute an url from its parts
 // like host, port, scheme, path and query parameters
 // using Method Chaining and Class
 
 class UrlBuilder {
   constructor() {
-    this.hostStr = "";
+    this.hostName = "";
     this.scheme = "http";
-    this.portNum = "";
+    this.portNumber = "";
     this.pathStr = "";
+    this.queryString = "";
   }
 
   // we assume no data validation and sanitizing is required
   // set the host string
   host(hostStr) {
-    this.hostStr = hostStr;
+    this.hostName = hostStr;
 
     // most important when using method chaining
     return this;
@@ -21,7 +22,7 @@ class UrlBuilder {
 
   // set the port number
   port(portNum) {
-    this.portNum = `:` + portNum.toString();
+    this.portNumber = `:` + portNum.toString();
     return this;
   }
 
@@ -43,23 +44,24 @@ class UrlBuilder {
       return `${key}=${queryObj[key]}`;
     });
     console.log("keystr", keyStr);
-    this.queryParam = keyStr ? `?${keyStr.join("&")}` : "";
+    this.queryString = keyStr ? `?${keyStr.join("&")}` : "";
     return this;
   }
 
   // forms the url from the parts
   build() {
-    return `${this.scheme}://${this.hostStr}${this.portNum}${this.pathStr}${this.queryParam}`;
+    return `${this.scheme}://${this.hostName}${this.portNumber}${this.pathStr}${this.queryString}`;
   }
 }
 
+// prints https://example.com:8080/the/file?name=john&lastName=doe
 console.log(
   "Forming the URL: ",
   new UrlBuilder()
-    .host("shell.com")
+    .host("example.com")
     .port(8080)
     .https()
-    .queryParams({ name: "anijit", lastName: "sau" })
+    .queryParams({ name: "john", lastName: "doe" })
     .path("/the/file")
     .build()
 );
