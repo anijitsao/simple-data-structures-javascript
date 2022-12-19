@@ -51,11 +51,11 @@ class LinkedList {
   }
 
   printList() {
-    const listElements = [this.head.element];
+    const listElements = [];
     let currentNode = this.head;
-    while (currentNode.next) {
-      currentNode = currentNode.next;
+    while (currentNode !== null) {
       listElements.push(currentNode.element);
+      currentNode = currentNode.next;
     }
     return listElements.toString();
   }
