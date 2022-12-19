@@ -59,6 +59,30 @@ class LinkedList {
     }
     return listElements.toString();
   }
+
+  removeElement(element) {
+    let currentNode = this.head;
+    let prevNode = null;
+
+    // iterate over the list
+    while (currentNode != null) {
+      // comparing element with currentNode
+      // element if found then remove the
+      // and return true
+      if (currentNode.element === element) {
+        if (prevNode == null) {
+          this.head = currentNode.next;
+        } else {
+          prevNode.next = currentNode.next;
+        }
+        this.size--;
+        return currentNode.element;
+      }
+      prevNode = currentNode;
+      currentNode = currentNode.next;
+    }
+    return -1;
+  }
 }
 
 const list1 = new LinkedList();
@@ -67,10 +91,14 @@ list1.append(37);
 console.log("list", list1);
 list1.append(38);
 console.log("list", list1);
+list1.append(68);
+console.log("list", list1);
 console.log(`list has ${list1.getLength()} elements`);
 
 console.log("does the list has element", 38, list1.search(38));
 console.log("does the list has element", 37, list1.search(37));
 console.log("does the list has element", 35, list1.search(35));
 
+console.log("print list", list1.printList());
+list1.removeElement(38);
 console.log("print list", list1.printList());
