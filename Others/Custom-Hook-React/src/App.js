@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import "./style.css";
-import { useService } from "./useServiceHook.js";
+import { useService } from "./useServiceHook";
 
 export default function App() {
   const [data, fetchData] = useService();
-  const [users, setUsers] = useState([]);
 
-  console.log("data, fetchdata", data, fetchData);
+  // initialize users with the empty Array from the custom hook
+  // later call the methods to fill the Array with users
+  const [users, setUsers] = useState(data);
 
   const fetchDataByHook = async () => {
-    const users = await fetchData("https://jsonplaceholder.typicode.com/users");
-    console.log("data received from Hook", users);
-    setUsers(users);
+    const usersReceived = await fetchData(
+      "https://jsonplaceholder.typicode.com/users"
+    );
+    console.log("data received from Hook", usersReceived);
+    setUsers(usersReceived);
   };
-
-  // fetchDataByHook();
 
   return (
     <div>
