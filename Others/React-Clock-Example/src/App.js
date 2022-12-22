@@ -3,25 +3,29 @@ import "./style.css";
 
 export default function App() {
   const [dateTime, setDateTime] = useState(new Date());
-  let timerInterval;
-  const timer = (e) => {
-    if (e.target.id === "stop") {
-      clearInterval(timerInterval);
-    }
-    timerInterval = setInterval(() => {
+
+  const startTimer = (e) => {
+    window.timerId = setInterval(() => {
       setDateTime(new Date());
     }, 1000);
+  };
+
+  const stopTimer = () => {
+    console.log("timer after create", window.timerId);
+    clearInterval(window.timerId);
   };
 
   return (
     <div>
       <h1>React Clock!</h1>
-      <span>{dateTime.toTimeString()}</span>
+      <span>
+        {dateTime
+          .toTimeString()
+          .substr(0, dateTime.toTimeString().indexOf(" "))}
+      </span>
       <br />
-      <button onClick={timer}>Start</button>
-      <button id="stop" onClick={timer}>
-        Stop
-      </button>
+      <button onClick={startTimer}>Start</button>
+      <button onClick={stopTimer}>Stop</button>
     </div>
   );
 }
