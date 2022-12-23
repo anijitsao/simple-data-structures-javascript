@@ -21,7 +21,7 @@ export default function App() {
       <span>
         {dateTime
           .toTimeString()
-          .substr(0, dateTime.toTimeString().indexOf(" "))}
+          .substring(0, dateTime.toTimeString().indexOf(" "))}
       </span>
       <br />
       <button onClick={startTimer}>Start</button>
