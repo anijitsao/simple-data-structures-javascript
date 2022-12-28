@@ -50,55 +50,38 @@ class LinkedList {
     return false;
   }
 
-  printList() {
+  print() {
     const listElements = [];
     let currentNode = this.head;
     while (currentNode !== null) {
       listElements.push(currentNode.element);
       currentNode = currentNode.next;
     }
-    return listElements.toString();
+    return listElements.join(" -> ");
   }
 
-  removeElement(element) {
+  remove(element) {
     let currentNode = this.head;
     let prevNode = null;
 
     // iterate over the list
     while (currentNode != null) {
-      // comparing element with currentNode
-      // element if found then remove the
-      // and return true
+      // comparing element with currentNode element
+      // if found then remove the node
       if (currentNode.element === element) {
         if (prevNode == null) {
           this.head = currentNode.next;
         } else {
           prevNode.next = currentNode.next;
         }
-        this.size--;
-        return currentNode.element;
+        this.size = this.size - 1;
+        return true;
       }
       prevNode = currentNode;
       currentNode = currentNode.next;
     }
-    return -1;
+    return false;
   }
 }
 
-const list1 = new LinkedList();
-console.log("list", list1);
-list1.append(37);
-console.log("list", list1);
-list1.append(38);
-console.log("list", list1);
-list1.append(68);
-console.log("list", list1);
-console.log(`list has ${list1.getLength()} elements`);
-
-console.log("does the list has element", 38, list1.search(38));
-console.log("does the list has element", 37, list1.search(37));
-console.log("does the list has element", 35, list1.search(35));
-
-console.log("print list", list1.printList());
-list1.removeElement(38);
-console.log("print list", list1.printList());
+export { LinkedList };
