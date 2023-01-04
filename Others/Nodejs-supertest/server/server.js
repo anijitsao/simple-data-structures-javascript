@@ -1,7 +1,7 @@
 import express from "express";
 
 // local imports
-import { serviceRouter } from "./routes/service";
+import { serviceRouter } from "../routes/service";
 
 const app = express();
 
