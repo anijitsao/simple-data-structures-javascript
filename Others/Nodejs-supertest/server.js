@@ -1,5 +1,8 @@
 import express from "express";
 
+// local imports
+import { serviceRouter } from "./routes/service";
+
 const app = express();
 
 app.use(express.json());
@@ -19,6 +22,9 @@ app.post("/login", (req, res) => {
 // app.listen(3000, () => {
 //   console.log("Server is running on 3000");
 // });
+
+// another service route
+app.use("/services", serviceRouter);
 
 // for integration testing
 export { app };
