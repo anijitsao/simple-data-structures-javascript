@@ -18,11 +18,10 @@
     "url": "https://github.com/anijitsahu/simple-data-structures-javascript/issues"
   },
   "homepage": "https://github.com/anijitsahu/simple-data-structures-javascript#readme",
-  "dependencies": {
-    "express": "^4.18.2",
-    "jest": "^28.1.2"
-  },
   "jest": {
     "collectCoverage": true
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
   }
 }
