@@ -18,3 +18,13 @@ student.arrowMethod();
 
 // Hi John Doe
 student.normalMethod();
+
+// 2. Logical AND demo
+// when all operands are truthy result right most truthy
+
+// prints "3 && 4: 4"
+console.log("3 && 4: ", 3 && 4);
+
+// when all operands are truthy result right most truthy
+// prints "3 && 4: 0"
+console.log("0 && 4: ", 3 && 0);

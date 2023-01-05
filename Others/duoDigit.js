@@ -32,4 +32,7 @@ function findMaximumDuoDigit(arrayOfNumbers) {
   return Math.max(...duoDigitNums);
 }
 
-export { checkIfDuoDigit, findMaximumDuoDigit };
+console.log(
+  "Maximum duo digit number: ",
+  findMaximumDuoDigit([12, 1133, 945, 99])
+);
