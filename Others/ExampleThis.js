@@ -28,3 +28,24 @@ console.log("3 && 4: ", 3 && 4);
 // when all operands are truthy result right most truthy
 // prints "3 && 4: 0"
 console.log("0 && 4: ", 3 && 0);
+
+/**
+ * Logical OR demo while using function call
+ *
+ */
+
+function A() {
+  console.log("called A");
+  return true;
+}
+function B() {
+  console.log("called B");
+  return false;
+}
+/* Output:
+  called B
+  called A
+  true
+*/
+
+console.log(B() || A());
