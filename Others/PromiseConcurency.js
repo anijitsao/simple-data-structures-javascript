@@ -18,7 +18,7 @@ Promise.all([p1, p2, p3])
   .then((res) => console.log("*** Promise.any **** Result is: ", res))
   .catch((err) => console.log("*** Promise.any **** Error occurred: ", err));
 
-// Promise.any resolve when any the promises resolves
+// Promise.any resolve as soon as any the promises resolves
 // Output: Result is:  Resolves immediately
 Promise.any([p1, p2, p3])
   .then((res) => console.log("Result is: ", res))
