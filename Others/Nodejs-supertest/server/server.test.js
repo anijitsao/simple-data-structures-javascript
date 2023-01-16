@@ -2,7 +2,7 @@
 import supertest from "supertest";
 
 // local imports
-import { app } from "../server/server";
+import { app } from "./server";
 
 /* To test when the app is deployed use the url of the app instead of importing it.
  For example use
