@@ -1,6 +1,6 @@
-import express from "express";
+import { Router } from "express";
 
-const serviceRouter = express.Router();
+const serviceRouter = Router();
 
 serviceRouter.get("/credentials", (req, res) => {
   res.status(200).json({ message: "Ok" });
