@@ -41,7 +41,7 @@ This example is showing Simple Data Structure using **JavaScript / ES6+**. All t
 1. Clone the repo
 
 ```bash
-$ git clone git@github.com:anijitsahu/simple-data-structures-javascript.git
+$ git clone https://github.com/anijitsahu/simple-data-structures-javascript.git
 ```
 
 2. Navigate into the directory and Install all the _necessary_ dependencies
