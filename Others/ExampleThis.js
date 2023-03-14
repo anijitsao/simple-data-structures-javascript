@@ -20,19 +20,16 @@ student.arrowMethod();
 student.normalMethod();
 
 // 2. Logical AND demo
-// when all operands are truthy result right most truthy
+// when all operands are truthy result is right most truthy
 
 // prints "3 && 4: 4"
 console.log("3 && 4: ", 3 && 4);
 
-// when all operands are truthy result right most truthy
-// prints "3 && 4: 0"
-console.log("0 && 4: ", 3 && 0);
+// when some operands are falsy result is falsy
+// prints "0 && 4: 0"
+console.log("0 && 4: ", 0 && 4);
 
-/**
- * Logical OR demo while using function call
- *
- */
+// Logical OR demo while using function call
 
 function A() {
   console.log("called A");
