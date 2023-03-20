@@ -9,15 +9,15 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anijitsahu/simple-data-structures-javascript.git"
+    "url": "git+https://github.com/anijitsao/simple-data-structures-javascript.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anijitsahu/simple-data-structures-javascript/issues"
+    "url": "https://github.com/anijitsao/simple-data-structures-javascript/issues"
   },
-  "homepage": "https://github.com/anijitsahu/simple-data-structures-javascript#readme",
+  "homepage": "https://github.com/anijitsao/simple-data-structures-javascript#readme",
   "jest": {
     "collectCoverage": true
   },
