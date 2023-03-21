@@ -39,7 +39,6 @@ function findMinimum(inputArray) {
   }
   return inputArray[minIndex];
 }
-console.log("Minimum: ", findMinimum([110, 2, 34, 22, 4]));
 
 /* 
   3. The following function will reverse a given Array 
